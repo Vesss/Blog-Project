@@ -17,7 +17,7 @@ def index():
     
 @app.route("/about")
 def about():
-    return render_template("about.html")
+    return render_template("about.html", about=mongo.db.about_information.find())
     
 @app.route("/contact")
 def contact():
