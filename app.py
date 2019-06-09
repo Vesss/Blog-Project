@@ -27,6 +27,10 @@ def contact():
 def post():
     return render_template("post.html")
     
+@app.route("/articles")
+def articles():
+    return render_template("articles.html")
+    
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
