@@ -23,6 +23,10 @@ def about():
 def contact():
     return render_template("contact.html")
     
+@app.route("/post")
+def post():
+    return render_template("post.html")
+    
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
