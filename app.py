@@ -12,9 +12,16 @@ app.config["MONGO_URI"] = "mongodb+srv://root:maniac93@myfirstcluster-ilypv.mong
 mongo = PyMongo(app)
 
 @app.route("/")
-@app.route("/publish_article")
-def publish_article():
-    return render_template("articles.html", articles=mongo.db.articles.find())
+def index():
+    return render_template("index.html")
+    
+@app.route("/about")
+def about():
+    return render_template("about.html")
+    
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
     
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
