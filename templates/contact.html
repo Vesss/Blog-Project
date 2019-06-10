@@ -1,16 +1,15 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm">
-                <h6>Contact Us</h6>
-            </div>
-            <div class="col-md">
-                <h1>Contact Us</h1>
-            </div>
-            <div class="col-lg">
-                <h3>Contact Us</h3>
-            </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-3">
+            <h3>Contact Us</h3>
         </div>
     </div>
+    <div class="row justify-content-center">
+        <div class="form-group col-sm-8">
+            <label for="comment">Share your thoughts below:</label>
+            <textarea class="form-control" rows="15" id="comment"></textarea>
+        </div>
+    </div>
+</div>
 {% endblock %}
