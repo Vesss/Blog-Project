@@ -1,15 +1,34 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-sm-3">
-            <h3>Contact Us</h3>
+<div class="container contact-form">
+    <h1>Contact form</h1>
+    <hr id="contact-form">
+
+    <div class="row" method="POST" action="/send">
+        <div class="offset-col-md-6">
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="name">Email</label>
+                <input type="text" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" rows="5"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit" value="submit" id="sendbutton">Send</button>
+            </div>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="form-group col-sm-8">
-            <label for="comment">Share your thoughts below:</label>
-            <textarea class="form-control" rows="15" id="comment"></textarea>
-        </div>
-    </div>
+
 </div>
 {% endblock %}

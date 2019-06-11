@@ -31,6 +31,11 @@ def post():
 def articles():
     return render_template("articles.html")
     
+# @app.route("/send", methods=["GET", "POST"])
+# def send():
+#     if request.method == "POST":
+        
+    
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
