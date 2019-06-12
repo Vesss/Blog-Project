@@ -1,12 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container contact-form">
     <h1>Contact form</h1>
-    <hr id="contact-form">
+    <hr />
 
-    <div class="row" method="POST" action="/send">
-        <div class="offset-col-md-6">
-
-        </div>
+    <form class="row" method="POST" action="/send">
 
         <div class="col-md-6">
             <div class="form-group">
@@ -28,7 +25,7 @@
                 <button class="btn btn-primary btn-block" type="submit" value="submit" id="sendbutton">Send</button>
             </div>
         </div>
-    </div>
+    </form>
 
 </div>
 {% endblock %}
