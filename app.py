@@ -44,6 +44,9 @@ def contact():
 def post():
     return render_template("post.html")
     
+# @app.route("/add_article")
+# def add_article():
+    
 @app.route("/articles")
 def articles():
     return render_template("articles.html")

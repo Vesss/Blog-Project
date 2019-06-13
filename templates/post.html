@@ -1,8 +1,36 @@
-{% extends 'base.html' %}
-{% block content %}
-    <div class="container">
-        <div class="row justify-content-center">
-            <h3 class="col-sm-4">Publish An Article!</h3>
-        </div>
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <h3 class="col-sm-4">Publish An Article!</h3>
     </div>
+</div>
+
+<br />
+
+<div class="container">
+    <div class="row">
+        <form action="" method="POST" class="col-sm-12">
+            <div class="form-group">
+                <label for="article">Article Title</label>
+                <input type="text" class="form-control" placeholder="Name your article">
+            </div>
+            <div class="dropdown form-group">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="text" class="form-control" placeholder="Paste a direct link to your image">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Article Content</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15"></textarea>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}
