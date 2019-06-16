@@ -78,7 +78,7 @@ def articles():
     
 @app.route("/sports_page")
 def sports_page():
-	return render_template("sports_page.html")
+	return render_template("sports_page.html", posts = mongo.db.sports.find())
 	
 @app.route("/general_news_page")
 def general_news_page():
