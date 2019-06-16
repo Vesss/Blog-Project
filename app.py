@@ -40,9 +40,34 @@ def about():
 def contact():
     return render_template("contact.html")
     
-@app.route("/post")
+@app.route("/post", methods=["GET", "POST"])
 def post():
-    return render_template("post.html")
+	if request.method == 'POST':
+		#get all the data sent up
+		data = request.form.to_dict()
+		#print it out to see it got sent properly
+		print(data)
+		# will look at adding to database next if data is sent up ok
+		
+		# dict to store new entry to database  
+		# will need to use keys you have in collection .. i named them title category etc
+		new_item = {
+			'title': request.form.get('title'),
+			'author': request.form.get('author'),
+			'url': request.form.get('url'),
+			'content': request.form.get('content')
+		}
+		print(new_item)
+		# need to get the category so can create the database string below
+		category=request.form.get('category')
+		print("category", category)
+		# this should insert into the right collection eg sport health
+		# if not will have to use if statements or switch
+		mongo.db[category].insert_one(new_item)
+		
+		return redirect('articles')
+	else:
+		return render_template('post.html')
     
 # @app.route("/add_article")
 # def add_article():

@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {{ mongo.db.getCollectionNames() }} {% block content %}
+
 <div class="container">
     <div class="row justify-content-center">
         <h3 class="col-sm-4">Publish An Article!</h3>
@@ -12,24 +13,42 @@
         <form action="" method="POST" class="col-sm-12">
             <div class="form-group">
                 <label for="article">Article Title</label>
-                <input type="text" class="form-control" placeholder="Name your article">
+                <input type="text" class="form-control" placeholder="Name your article" name="title">
             </div>
-            <div class="dropdown form-group">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
+            <!--<div class="dropdown form-group">-->
+            <!--    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>-->
+            <!--    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="category" name="category">-->
+            <!--        <option class="dropdown-item" disabled>Select a category</option>-->
+            <!--        <option name="sport">Sport</option>-->
+            <!--        <option name="general_news">General News</option>-->
+            <!--        <option name="health">Health</option>-->
+            <!--        <option name="technology">Technology</option>-->
+            <!--        <option name="fashion">Fashion</option>-->
+            <!--    </div>-->
+            <!--</div>-->
+
+            <select name="category">
+                <option class="dropdown-item" disabled>Select a category</option>
+                <option value="sport">Sport</option>
+                <option value="general_news">General News</option>
+                <option value="health">Health</option>
+                <option value="technology">Technology</option>
+                <option value="fashion">Fashion</option>
+            </select>
+
             <div class="form-group">
                 <label for="image">Image</label>
-                <input type="text" class="form-control" placeholder="Paste a direct link to your image">
+                <input type="text" class="form-control" placeholder="Paste a direct link to your image" name="url">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Article Content</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" name="content"></textarea>
             </div>
+            <div class="form-group">
+                <label for="image">Author</label>
+                <input type="text" class="form-control" placeholder="Paste a direct link to your image" name="author">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 </div>
