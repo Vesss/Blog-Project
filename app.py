@@ -76,25 +76,25 @@ def post():
 def articles():
     return render_template("articles.html")
     
-@app.route("/sports")
-def sports():
-	return render_template("sports.html")
+@app.route("/sports_page")
+def sports_page():
+	return render_template("sports_page.html")
 	
-@app.route("/general_news")
-def general_news():
+@app.route("/general_news_page")
+def general_news_page():
 	return render_template("general_news.html")
 
-@app.route("/technology")
-def technology():
-	return render_template("technology.html")
+@app.route("/technology_page")
+def technology_page():
+	return render_template("technology_page.html")
 	
-@app.route("/fashion")
-def fashion():
-	return render_template("fashion.html")
+@app.route("/fashion_page")
+def fashion_page():
+	return render_template("fashion_page.html")
 
-@app.route("/health")
-def health():
-	return render_template("health.html")
+@app.route("/health_page")
+def health_page():
+	return render_template("health_page.html")
     
 @app.route("/send", methods=["GET", "POST"])
 def send():
