@@ -76,6 +76,26 @@ def post():
 def articles():
     return render_template("articles.html")
     
+@app.route("/sports")
+def sports():
+	return render_template("sports.html")
+	
+@app.route("/general_news")
+def general_news():
+	return render_template("general_news.html")
+
+@app.route("/technology")
+def technology():
+	return render_template("technology.html")
+	
+@app.route("/fashion")
+def fashion():
+	return render_template("fashion.html")
+
+@app.route("/health")
+def health():
+	return render_template("health.html")
+    
 @app.route("/send", methods=["GET", "POST"])
 def send():
     msg = Message("Hi there", recipients=["ves.dimitrov121@gmail.com"])
