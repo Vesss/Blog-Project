@@ -9,3 +9,14 @@
 hr {
     background: white;
 }
+
+.article-title {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.article-author {
+    font-family: 'Exo 2', sans-serif;
+    font-style: italic;
+}

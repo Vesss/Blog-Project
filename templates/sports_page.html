@@ -3,11 +3,12 @@
 <br />
 {% for item in posts %}
 
-        <div>
+        <div class="article-title text-center">
             {{ item.title }}
         </div>
-        <p>Published by: {{ item.author }}</p>
-        <img src="{{ item.url }}"></img>
+        <p class="article-author text-left">Published by: {{ item.author }}</p>
+        <img src="{{ item.url }}" class="img-fluid" alt="Responsive image"></img>
+        <br />
         <div>
             {{ item.content }}
         </div>
