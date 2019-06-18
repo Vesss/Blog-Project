@@ -20,3 +20,29 @@ hr {
     font-family: 'Exo 2', sans-serif;
     font-style: italic;
 }
+
+.article-content {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20.5px;
+}
+
+.article-line {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 600px) {
+    .article-title {
+        font-size: 17.5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .article-author {
+        font-size: 17.5px;
+    }
+}
