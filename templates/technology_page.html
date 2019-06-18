@@ -1,4 +1,17 @@
-{% extends 'base.html' %}
-{% block content %}
-    <h2>Technology</h2>
-{% endblock %}
+{% extends 'base.html' %} {% block content %}
+<h2>Technology</h2>
+<br />
+{% for item in posts %}
+
+        <div class="article-title text-center">
+            {{ item.title }}
+        </div>
+        <p class="article-author text-left">Published by: {{ item.author }}</p>
+        <img src="{{ item.url }}" class="img-fluid article-image" alt="Responsive image"></img>
+        <br />
+        <div class="article-content">
+            {{ item.content }}
+        </div>
+        <br />
+        <hr class="article-line" />
+{% endfor %} {% endblock %}

@@ -16,6 +16,10 @@ hr {
     text-transform: uppercase;
 }
 
+.article-image {
+    margin-bottom: 30px;
+}
+
 .article-author {
     font-family: 'Exo 2', sans-serif;
     font-style: italic;

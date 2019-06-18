@@ -82,19 +82,19 @@ def sports_page():
 	
 @app.route("/general_news_page")
 def general_news_page():
-	return render_template("general_news.html")
+	return render_template("general_news.html", posts = mongo.db.general_news.find())
 
 @app.route("/technology_page")
 def technology_page():
-	return render_template("technology_page.html")
+	return render_template("technology_page.html", posts = mongo.db.technology.find())
 	
 @app.route("/fashion_page")
 def fashion_page():
-	return render_template("fashion_page.html")
+	return render_template("fashion_page.html", posts = mongo.fashion.find())
 
 @app.route("/health_page")
 def health_page():
-	return render_template("health_page.html")
+	return render_template("health_page.html", posts = mongo.db.health.find())
     
 @app.route("/send", methods=["GET", "POST"])
 def send():
