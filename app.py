@@ -88,9 +88,9 @@ def general_news_page():
 def technology_page():
 	return render_template("technology_page.html", posts = mongo.db.technology.find())
 	
-@app.route("/fashion_page")
-def fashion_page():
-	return render_template("fashion_page.html", posts = mongo.fashion.find())
+@app.route("/travel_page")
+def travel_page():
+	return render_template("travel_page.html", posts = mongo.db.travel.find())
 
 @app.route("/health_page")
 def health_page():
