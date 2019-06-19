@@ -1,16 +1,53 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <div class="container">
     <div class="row justify-content-center">
         <h2>Articles</h2>
+        <!--    </div>-->
+        <!--    <br />-->
+        <!--    <div class="row justify-content-center">-->
+        <!--        <a href="{{ url_for('general_news_page') }}" class="col">General News</a>-->
+        <!--        <a href="{{ url_for('sports_page') }}" class="col">Sports</a>-->
+        <!--        <a href="{{ url_for('technology_page') }}" class="col">Technology</a>-->
+        <!--        <a href="{{ url_for('travel_page') }}" class="col">Travel</a>-->
+        <!--        <a href="{{ url_for('health_page') }}" class="col">Health</a>-->
+        <!--    </div>-->
     </div>
-    <br />
+</div>
+
+<div class="container text-center">
+
     <div class="row justify-content-center">
-        <a href="{{ url_for('general_news_page') }}" class="col">General News</a>
-        <a href="{{ url_for('sports_page') }}" class="col">Sports</a>
-        <a href="{{ url_for('technology_page') }}" class="col">Technology</a>
-        <a href="{{ url_for('travel_page') }}" class="col">Travel</a>
-        <a href="{{ url_for('health_page') }}" class="col">Health</a>
+
+        <div class="col-sm-2">
+            <a href="{{ url_for('general_news_page') }}">General News
+                <img src="{{url_for('static', filename='img/general_news_icon.jpg') }}" class="category-image rounded"></img>
+            </a>
+        </div>
+
+        <div class="col-sm-2">
+            <a href="{{ url_for('health_page') }}">Health
+                <img src="{{url_for('static', filename='img/health_icon.jpg') }}" class="category-image"></img>
+            </a>
+        </div>
+
+        <div class="col-sm-2">
+            <a href="{{ url_for('sports_page') }}">Sports
+                <img src="{{url_for('static', filename='img/ufc_logo.png') }}" class="category-image"></img>
+            </a>
+        </div>
+
+        <div class="col-sm-2">
+            <a href="{{ url_for('travel_page') }}">Travel
+                <img src="{{url_for('static', filename='img/travel_logo.jpg') }}" class="category-image"></img>
+            </a>
+        </div>
+
+        <div class="col-sm-2">
+            <a href="{{ url_for('general_news_page') }}">Technology
+                <img src="{{url_for('static', filename='img/technology_logo.jpg') }}" class="category-image rounded"></img>
+            </a>
+        </div>
+
     </div>
 </div>
 {% endblock %}
