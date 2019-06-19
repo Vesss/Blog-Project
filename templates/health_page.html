@@ -1,13 +1,15 @@
 {% extends 'base.html' %} {% block content %}
-<h2>Health</h2>
+<h2>Health Section</h2>
 <br />
 {% for item in posts %}
 
         <div class="article-title text-center">
             {{ item.title }}
         </div>
-        <p class="article-author text-left">Published by: {{ item.author }}</p>
-        <img src="{{ item.url }}" class="img-fluid article-image" alt="Responsive image"></img>
+        <p class="article-author text-center">Published by: {{ item.author }}</p>
+        <div class="text-center">
+        <img src="{{ item.url }}" class="img-fluid article-image rounded" alt="Responsive image"></img>
+        </div>
         <br />
         <div class="article-content">
             {{ item.content }}
