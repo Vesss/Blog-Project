@@ -37,11 +37,6 @@ hr {
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
-.category-image {
-    max-width: 200px;
-    max-height: 200px;
-}
-
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 600px) {
