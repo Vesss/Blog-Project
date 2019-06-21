@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <h2>General News Section</h2>
 <br />
-{% for item in posts %}
+{% for item in posts|reverse %}
 
         <div class="article-title text-center">
             {{ item.title }}

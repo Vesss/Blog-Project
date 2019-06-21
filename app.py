@@ -19,7 +19,7 @@ app.config["MAIL_USE_SSL"] = False
 # app.config["MAIL_DEBUG"] = True
 app.config["MAIL_USERNAME"] = None
 app.config["MAIL_PASSWORD"] = None
-app.config["MAIL_DEFAULT_SENDER"] = "blitzermann4@gmail.com"
+app.config["MAIL_DEFAULT_SENDER"] = None
 app.config["MAIL_MAX_EMAILS"] = 5
 app.config["MAIL_SUPPRESS_SEND"] = False
 app.config["MAIL_ASCII_ATTACHMENTS"] = False
@@ -30,16 +30,16 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
-    
+	return render_template("index.html")
+	
 @app.route("/about")
 def about():
-    return render_template("about.html", about=mongo.db.about_information.find())
-    
+	return render_template("about.html", about=mongo.db.about_information.find())
+	
 @app.route("/contact")
 def contact():
-    return render_template("contact.html")
-    
+	return render_template("contact.html")
+	
 @app.route("/post", methods=["GET", "POST"])
 def post():
 	if request.method == 'POST':
@@ -68,14 +68,11 @@ def post():
 		return redirect('articles')
 	else:
 		return render_template('post.html')
-    
-# @app.route("/add_article")
-# def add_article():
-    
+	
 @app.route("/articles")
 def articles():
-    return render_template("articles.html")
-    
+	return render_template("articles.html")
+	
 @app.route("/sports_page")
 def sports_page():
 	return render_template("sports_page.html", posts = mongo.db.sports.find())
@@ -95,19 +92,38 @@ def travel_page():
 @app.route("/health_page")
 def health_page():
 	return render_template("health_page.html", posts = mongo.db.health.find())
-    
+	
 @app.route("/send", methods=["GET", "POST"])
 def send():
-    msg = Message("Hi there", recipients=["ves.dimitrov121@gmail.com"])
+    letter = {
+        'name': request.form.get('name'),
+        'email': request.form.get('email'),
+        'message': request.form.get('message')
+    }
+    msg = Message(letter, sender=["blitzermann4@gmail.com"], recipients=["ves.dimitrov121@gmail.com"])
     mail.send(msg)
     if request.method == "POST":
         return 'Form posted.'
     elif request.method == "GET":
         return render_template('contact.html')
-        
-    
+		
+# @app.route("/send", methods=["GET", "POST"])
+# def send():
+# 	letter = {
+# 			'name': request.form.get('name'),
+# 			'email': request.form.get('email'),
+# 			'message': request.form.get('message')
+# 		}
+# 	msg = Message(letter, recipients=["ves.dimitrov121@gmail.com"])
+# 	mail.send(msg)
+# 		if request.method == "POST":
+#         	return 'Form posted.'
+#     	elif request.method == "GET":
+#         	return render_template('contact.html')
+		
+	
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
+	app.run(host=os.environ.get("IP"),
+			port=int(os.environ.get("PORT")),
+			debug=True)
 
