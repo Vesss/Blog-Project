@@ -42,6 +42,10 @@ hr {
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
+#articles-tag {
+    margin-bottom: 50px;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 600px) {
