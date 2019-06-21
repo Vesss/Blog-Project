@@ -10,10 +10,15 @@ hr {
     background: white;
 }
 
+
 .article-title {
     font-family: 'Exo 2', sans-serif;
     font-size: 40px;
     text-transform: uppercase;
+}
+
+#select-category {
+    cursor: pointer;
 }
 
 .article-image {

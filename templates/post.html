@@ -16,9 +16,9 @@
                 <input type="text" class="form-control" placeholder="Name your article" name="title" required>
             </div>
             
-            <p>Please select a category!</p>
+            <div class="alert alert-success">Select a category!</div>
 
-            <select name="category" class="alert alert-info">
+            <select name="category" class="alert alert-info" id="select-category">
                 <option class="dropdown-item" disabled>Select a category</option>
                 <option value="sports">Sports</option>
                 <option value="general_news">General News</option>
@@ -31,9 +31,12 @@
                 <label for="image">Image Link</label>
                 <input type="text" class="form-control" placeholder="Paste a direct link to your image" name="url" required>
             </div>
+            
+            <p class="alert alert-danger">ATTENTION! If you wish to copy someone else's article and publish it on The Daily Writer, please make sure to include the source of the article at the end of the field (including the writer's name, in the author field of the form)!</p>
+            
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Article Content</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" name="content" required></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" name="content" required></textarea>
             </div>
             <div class="form-group">
                 <label for="image">Author</label>
