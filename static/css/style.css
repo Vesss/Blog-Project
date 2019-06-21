@@ -10,6 +10,10 @@ hr {
     background: white;
 }
 
+.frontimage {
+    margin-bottom: 10px;
+}
+
 
 .article-title {
     font-family: 'Exo 2', sans-serif;

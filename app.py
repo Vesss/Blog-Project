@@ -30,7 +30,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-	return render_template("index.html")
+	return render_template("index.html", sportspage=mongo.db.sports.find(), generalnewspage=mongo.db.general_news.find(), technologypage=mongo.db.technology_page.find(), healthpage=mongo.db.health_page.find(), travelpage=mongo.db.travel_page.find())
 	
 @app.route("/about")
 def about():
