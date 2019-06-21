@@ -44,6 +44,11 @@ hr {
 
 a:hover {
     text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+}
+
+a {
+    font-family: 'Exo 2', sans-serif;
 }
 
 #articles-tag {
