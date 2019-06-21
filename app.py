@@ -30,7 +30,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-	return render_template("index.html", sportspage=mongo.db.sports.find(), generalnewspage=mongo.db.general_news.find(), technologypage=mongo.db.technology_page.find(), healthpage=mongo.db.health_page.find(), travelpage=mongo.db.travel_page.find())
+	return render_template("index.html", sportspage=mongo.db.sports.find(), generalnewspage=mongo.db.general_news.find(), technologypage=mongo.db.technology.find(), healthpage=mongo.db.health.find(), travelpage=mongo.db.travel.find())
 	
 @app.route("/about")
 def about():
@@ -39,6 +39,18 @@ def about():
 @app.route("/contact")
 def contact():
 	return render_template("contact.html")
+def send():
+    letter = {
+        'name': request.form.get('name'),
+        'email': request.form.get('email'),
+        'message': request.form.get('message')
+    }
+    msg = Message(letter, sender=letter['email'], recipients=["ves.dimitrov121@gmail.com"])
+    mail.send(msg)
+    if request.method == "POST":
+        return 'Form posted.'
+    elif request.method == "GET":
+        return render_template('contact.html')
 	
 @app.route("/post", methods=["GET", "POST"])
 def post():
@@ -92,35 +104,6 @@ def travel_page():
 @app.route("/health_page")
 def health_page():
 	return render_template("health_page.html", posts = mongo.db.health.find())
-	
-@app.route("/send", methods=["GET", "POST"])
-def send():
-    letter = {
-        'name': request.form.get('name'),
-        'email': request.form.get('email'),
-        'message': request.form.get('message')
-    }
-    msg = Message(letter, sender=["blitzermann4@gmail.com"], recipients=["ves.dimitrov121@gmail.com"])
-    mail.send(msg)
-    if request.method == "POST":
-        return 'Form posted.'
-    elif request.method == "GET":
-        return render_template('contact.html')
-		
-# @app.route("/send", methods=["GET", "POST"])
-# def send():
-# 	letter = {
-# 			'name': request.form.get('name'),
-# 			'email': request.form.get('email'),
-# 			'message': request.form.get('message')
-# 		}
-# 	msg = Message(letter, recipients=["ves.dimitrov121@gmail.com"])
-# 	mail.send(msg)
-# 		if request.method == "POST":
-#         	return 'Form posted.'
-#     	elif request.method == "GET":
-#         	return render_template('contact.html')
-		
 	
 if __name__ == "__main__":
 	app.run(host=os.environ.get("IP"),
