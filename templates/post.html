@@ -10,22 +10,13 @@
 
 <div class="container">
     <div class="row">
-        <form action="" method="POST" class="col-sm-12">
+        <form action="" method="POST" class="col-sm-12" required>
             <div class="form-group">
                 <label for="article">Article Title</label>
-                <input type="text" class="form-control" placeholder="Name your article" name="title">
+                <input type="text" class="form-control" placeholder="Name your article" name="title" required>
             </div>
-            <!--<div class="dropdown form-group">-->
-            <!--    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</button>-->
-            <!--    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="category" name="category">-->
-            <!--        <option class="dropdown-item" disabled>Select a category</option>-->
-            <!--        <option name="sport">Sport</option>-->
-            <!--        <option name="general_news">General News</option>-->
-            <!--        <option name="health">Health</option>-->
-            <!--        <option name="technology">Technology</option>-->
-            <!--        <option name="fashion">Fashion</option>-->
-            <!--    </div>-->
-            <!--</div>-->
+            
+            <p>Please select a category!</p>
 
             <select name="category" class="alert alert-info">
                 <option class="dropdown-item" disabled>Select a category</option>
@@ -38,15 +29,15 @@
 
             <div class="form-group">
                 <label for="image">Image Link</label>
-                <input type="text" class="form-control" placeholder="Paste a direct link to your image" name="url">
+                <input type="text" class="form-control" placeholder="Paste a direct link to your image" name="url" required>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Article Content</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" name="content"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" name="content" required></textarea>
             </div>
             <div class="form-group">
                 <label for="image">Author</label>
-                <input type="text" class="form-control" placeholder="Paste a direct link to your image" name="author">
+                <input type="text" class="form-control" placeholder="Paste a direct link to your image" name="author" required>
             </div>
             <button type="submit" class="btn btn-info">Submit</button>
         </form>
