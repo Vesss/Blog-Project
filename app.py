@@ -77,7 +77,7 @@ def post():
 		# if not will have to use if statements or switch
 		mongo.db[category].insert_one(new_item)
 		
-		return redirect('articles')
+		return redirect('/')
 	else:
 		return render_template('post.html')
 	
