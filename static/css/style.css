@@ -10,6 +10,67 @@ hr {
     background: white;
 }
 
+.author {
+    font-size: 17px;
+}
+
+.post-title {
+    margin-bottom: 40px;
+}
+
+.generalnews, .latest-general-news {
+    color: blue;
+}
+
+.latest-general-news {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+}
+
+.latest-sports-news {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+}
+
+.sportsnews, .latest-sports-news {
+    color: red;
+}
+
+.latest-technology-news {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+}
+
+.technologynews, .latest-technology-news {
+    color: #8c66ff;
+}
+
+.latest-health-news {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+}
+
+.latest-health-news, healthnews {
+    color: green;
+}
+
+.latest-travel-news {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 30px;
+}
+
+.latest-travel-news, travelnews {
+    color: #ff8c66;
+}
+
+
+.index-line {
+    background-color: black;
+    height: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
 .frontimage {
     margin-bottom: 10px;
 }

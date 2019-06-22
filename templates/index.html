@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
+  <p class="latest-general-news">Latest General News</p>
   <div class="row">
     <div>
       <a href="{{ url_for('general_news_page') }}">
@@ -8,18 +9,19 @@
               {% if loop.index == 1 %}
               {{ item.title }}
             </h2>
-            <img src="{{ item.url }}" class="frontimage img-fluid">
+            <img src="{{ item.url }}" class="frontimage img-fluid col-lg-7">
             <p>CLICK to read the whole article!</p>
-            <h5 class="post-subtitle">
+            <h5 class="post-subtitle author">
               Author: {{ item.author }}
             </h5>
             {% endif %}
             {% endfor %}
           </a>
     </div>
+    <hr class="index-line">
   </div>
 
-  <hr>
+  <p class="latest-sports-news">Latest Sports News</p>
   <div class="row">
     <div>
       <a href="{{ url_for('sports_page') }}">
@@ -28,19 +30,19 @@
               {% if loop.index == 1 %}
               {{ item.title }}
             </h2>
-            <img src="{{ item.url }}" class="frontimage img-fluid">
+            <img src="{{ item.url }}" class="frontimage img-fluid col-lg-7">
             <p>CLICK to read the whole article!</p>
-            <h5 class="post-subtitle">
+            <h5 class="post-subtitle author">
               Author: {{ item.author }}
             </h5>
             {% endif %}
             {% endfor %}
           </a>
     </div>
+    <hr class="index-line">
   </div>
   
-  <hr>
-
+<p class="latest-technology-news">Latest Technology News</p>
   <div class="row">
     <div>
       <a href="{{ url_for('technology_page') }}">
@@ -49,19 +51,20 @@
               {% if loop.index == 1 %}
               {{ item.title }}
             </h2>
-            <img src="{{ item.url }}" class="frontimage img-fluid">
+            <img src="{{ item.url }}" class="frontimage img-fluid col-lg-7">
             <p>CLICK to read the whole article!</p>
-            <h5 class="post-subtitle">
+            <h5 class="post-subtitle author">
               Author: {{ item.author }}
             </h5>
             {% endif %}
             {% endfor %}
           </a>
     </div>
+    <hr class="index-line">
   </div>
   
-  <hr>
-
+  
+<p class="latest-health-news">Latest Health News</p>
   <div class="row">
     <div>
       <a href="{{ url_for('health_page') }}">
@@ -70,19 +73,19 @@
               {% if loop.index == 1 %}
               {{ item.title }}
             </h2>
-            <img src="{{ item.url }}" class="frontimage img-fluid">
+            <img src="{{ item.url }}" class="frontimage img-fluid col-lg-7">
             <p>CLICK to read the whole article!</p>
-            <h5 class="post-subtitle">
+            <h5 class="post-subtitle author">
               Author: {{ item.author }}
             </h5>
             {% endif %}
             {% endfor %}
           </a>
     </div>
+    <hr class="index-line">
   </div>
   
-  <hr>
-
+  <p class="latest-travel-news">Latest Travel News</p>
   <div class="row">
     <div>
       <a href="{{ url_for('travel_page') }}">
@@ -91,9 +94,9 @@
               {% if loop.index == 1 %}
               {{ item.title }}
             </h2>
-            <img src="{{ item.url }}" class="frontimage img-fluid">
+            <img src="{{ item.url }}" class="frontimage img-fluid col-lg-7">
             <p>CLICK to read the whole article!</p>
-            <h5 class="post-subtitle">
+            <h5 class="post-subtitle author">
               Author: {{ item.author }}
             </h5>
             {% endif %}
