@@ -2,29 +2,12 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from flask_mail import Mail
-from flask_mail import Message
 
 
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = "blog_project"
 app.config["MONGO_URI"] = "mongodb+srv://root:maniac93@myfirstcluster-ilypv.mongodb.net/blog_project?retryWrites=true&w=majority"
-app.config["DEBUG"] = True
-app.config["TESTING"] = False
-app.config["MAIL_SERVER"] = "smtp.gmail.com"
-app.config["MAIL_PORT"] = 587
-app.config["MAIL_USE_TLS"] = True
-app.config["MAIL_USE_SSL"] = False
-# app.config["MAIL_DEBUG"] = True
-app.config["MAIL_USERNAME"] = None
-app.config["MAIL_PASSWORD"] = None
-app.config["MAIL_DEFAULT_SENDER"] = None
-app.config["MAIL_MAX_EMAILS"] = 5
-app.config["MAIL_SUPPRESS_SEND"] = False
-app.config["MAIL_ASCII_ATTACHMENTS"] = False
-
-mail = Mail(app)
 
 mongo = PyMongo(app)
 
@@ -39,18 +22,7 @@ def about():
 @app.route("/contact")
 def contact():
 	return render_template("contact.html")
-def send():
-    letter = {
-        'name': request.form.get('name'),
-        'email': request.form.get('email'),
-        'message': request.form.get('message')
-    }
-    msg = Message(letter, sender=letter['email'], recipients=["ves.dimitrov121@gmail.com"])
-    mail.send(msg)
-    if request.method == "POST":
-        return 'Form posted.'
-    elif request.method == "GET":
-        return render_template('contact.html')
+
 	
 @app.route("/post", methods=["GET", "POST"])
 def post():
