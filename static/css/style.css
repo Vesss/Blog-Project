@@ -10,6 +10,14 @@ hr {
     background: white;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .author {
     font-size: 17px;
 }
