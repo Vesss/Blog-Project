@@ -35,6 +35,11 @@ Regardless, the site has intuitive features.
 
 The latest article for each category (five categories in total) is displayed on the Home Page.
 
+When the user goes to the 'POST' page, they are taken to a submission form. There they have to:
+
+1. Give the article a title
+![article_title](https://i.ibb.co/kQD764N/article-title.jpg "Article title")
+
 ## Languages / Frameworks
 
 * HTML, CSS, SCSS
