@@ -1,5 +1,7 @@
 # The Daily Writer
 
+**LINK to the active application:** https://blog-project-flask-mongo.herokuapp.com/
+
 The Daily Writer is my third milestone project as part of my Full Stack Web Development course at Code Institute.
 
 The project is a blog / news site where anyone can post an article.
