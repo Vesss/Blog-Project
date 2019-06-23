@@ -1,4 +1,4 @@
-## The Daily Writer
+# The Daily Writer
 
 The Daily Writer is my third milestone project as part of my Full Stack Web Development course at Code Institute.
 
