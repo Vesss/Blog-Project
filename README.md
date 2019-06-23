@@ -59,6 +59,49 @@ When the user goes to the 'POST' page, they are taken to a submission form. Ther
 
 After submitting the article, the user gets redirected to the home page, where he will see his article posted as the latest content in his section (whichever section they chose).
 
+## Database Schema
+
+The uploaded contents (articles) are stored in a datastore - in MongoDB, divided into 5 collections:
+
+**1. general_news**
+**2. health**
+**3. sports**
+**4. technology**
+**5. travel**
+
+These collections have been wired in the application's back-end:
+
+```
+@app.route("/post", methods=["GET", "POST"])
+def post():
+	if request.method == 'POST':
+		#get all the data sent up
+		data = request.form.to_dict()
+		#print it out to see it got sent properly
+		print(data)
+		# will look at adding to database next if data is sent up ok
+		
+		# dict to store new entry to database  
+		# will need to use keys you have in collection .. i named them title category etc
+		new_item = {
+			'title': request.form.get('title'),
+			'author': request.form.get('author'),
+			'url': request.form.get('url'),
+			'content': request.form.get('content')
+		}
+		print(new_item)
+		# need to get the category so can create the database string below
+		category=request.form.get('category')
+		print("category", category)
+		# this should insert into the right collection eg sport health
+		# if not will have to use if statements or switch
+		mongo.db[category].insert_one(new_item)
+		
+		return redirect('/')
+	else:
+		return render_template('post.html')
+```
+
 ## Languages / Frameworks
 
 * HTML, CSS, SCSS
