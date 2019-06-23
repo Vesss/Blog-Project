@@ -41,7 +41,19 @@ When the user goes to the 'POST' page, they are taken to a submission form. Ther
 ![article_title](https://i.ibb.co/kQD764N/article-title.jpg "Article title")
 
 *2. Select a category:*
-![select_category](https://i.ibb.co/D4fzdsw/select-category.jpg "Seect category")
+![select_category](https://i.ibb.co/D4fzdsw/select-category.jpg "Select category")
+
+*3. Provide an image URL:*
+![image_link](https://i.ibb.co/9bT21XV/image-link.jpg "User image url")
+
+*4. Write the article:*
+![article_content](https://i.ibb.co/vhtzvNW/article-content.jpg "Article content")
+
+*5. Submit author's name:*
+![author_name](https://i.ibb.co/1L04TGD/author.jpg "Author")
+
+*6. Click submit button:*
+![submit_button](https://i.ibb.co/2M8FyzF/submit.jpg "Submit")
 
 ## Languages / Frameworks
 
