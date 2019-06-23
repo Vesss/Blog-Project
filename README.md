@@ -69,7 +69,7 @@ The uploaded contents (articles) are stored in a datastore - in MongoDB, divided
 **4. technology**  
 **5. travel**
 
-These collections have been wired in the application's back-end:
+These collections have been wired in the application's back-end, and more specifically - to the post.html page's submission form:
 
 ```
 @app.route("/post", methods=["GET", "POST"])
@@ -100,6 +100,67 @@ def post():
 		return redirect('/')
 	else:
 		return render_template('post.html')
+```
+
+A similar enough logic has been applied to the home page and to the home page and to each category's individual page.
+A path to each collection (category) was saved in a variable and rendered to the home page:
+
+```
+@app.route("/")
+def index():
+	return render_template("index.html", sportspage=mongo.db.sports.find(), generalnewspage=mongo.db.general_news.find(), technologypage=mongo.db.technology.find(), healthpage=mongo.db.health.find(), travelpage=mongo.db.travel.find())
+```
+
+These variables were then used to output the latest content for each category on the front page, using Flask's and Python's programmatic logic.
+The 'General News' section serves as an example:
+
+```
+<div class="container">
+  <p class="latest-general-news">Latest General News</p>
+  <div class="row">
+    <div>
+      <a href="{{ url_for('general_news_page') }}">
+            {% for item in generalnewspage|reverse %}
+            <h2 class="post-title">
+              {% if loop.index == 1 %}
+              {{ item.title }}
+            </h2>
+            <img src="{{ item.url }}" class="frontimage img-fluid col-lg-7">
+            <p>CLICK to read the whole article!</p>
+            <h5 class="post-subtitle author">
+              Author: {{ item.author }}
+            </h5>
+            {% endif %}
+            {% endfor %}
+          </a>
+    </div>
+    <hr class="index-line">
+  </div>
+```
+
+The same logic of saving the collections in variables and using these variables to display content on the pages has been applied to each individual category; Each category has it's own page, which can be accessed from the Articles page.
+
+There, upon choosing a category page, the user is presented with all of the submitted articles, for the particular category, in reverse order (from newest to oldest). This was achieved through Jinja's for loop's and ability to display a for loop in reverse.
+The health page serves as an example for how all categories were (identically) written:
+
+```
+<h2 class="healthnews">Health Section</h2>
+<br />
+{% for item in posts|reverse %}
+
+        <div class="article-title text-center">
+            {{ item.title }}
+        </div>
+        <p class="article-author text-center">Published by: {{ item.author }}</p>
+        <div class="text-center">
+        <img src="{{ item.url }}" class="img-fluid article-image rounded" alt="Responsive image"></img>
+        </div>
+        <br />
+        <div class="article-content">
+            {{ item.content }}
+        </div>
+        <br />
+        <hr class="article-line" />
 ```
 
 ## Languages / Frameworks
