@@ -55,7 +55,7 @@ The users may upload an article to each one of the categories (collections).
 
 ## Contributions
 
-#ATTENTION!
+**#ATTENTION!**
 As mentioned above, this project was built using a Boostrap theme. This means that there are default files and folders NOT created by me and NOT written by me.
 Those 'default' files include:
 * Vendor folder, including the folders inside of it and their contents:
