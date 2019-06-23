@@ -59,15 +59,15 @@ The users may upload an article to each one of the categories (collections).
 As mentioned above, this project was built using a Boostrap theme. This means that there are default files and folders NOT created by me and NOT written by me.
 Those 'default' files include:
 * Vendor folder, including the folders inside of it and their contents:
-    ** bootstrap
-    ** fontawesome-free
-    ** jquery
+    * bootstrap
+    * fontawesome-free
+    * jquery
 * SCSS folder and ALL of its contents
 * JS folder
 * CSS folder and two of its contents:
-    ** clean-blog.css
-    ** clean-blog-min.css
-    ** (this does NOT include the style.css folder - this is a custom file, with custome styles, created by me)
+    * clean-blog.css
+    * clean-blog-min.css
+    * (this does NOT include the style.css folder - this is a custom file, with custome styles, created by me)
 * mail folder
 
 *The menu items - each one a separate html file - have been edited, and some of them renamed, to suit the nature of the project. Additional pages have been added - the ones that represent the different categories (with underscores in their names).*
