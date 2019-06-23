@@ -35,7 +35,7 @@ Regardless, the site has intuitive features.
 
 The latest article for each category (five categories in total) is displayed on the Home Page.
 
-(https://i.ibb.co/M6wWPG0/general-news.jpg)
+![general_news](https://i.ibb.co/M6wWPG0/general-news.jpg)
 
 ## Languages / Frameworks
 
