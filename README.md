@@ -43,8 +43,38 @@ The latest article for each category (five categories in total) is displayed on 
 * Bootstrap 4.3.1 / 'Clean Blog' theme via startbootstrap.com
 * Google Fonts (Exo 2, Open Sans Condensed, Fjalla One)
 
-## Deployment & Contributions
+## Deployment
 
 The source code for this project is deloyed on GitHub.com; The working app is deployed on Heroku.
+
+## Testing
+
+All of the site's features have been tested manually, due to the simplicity of the Flask framework.
+
+The users may upload an article to each one of the categories (collections).
+
+## Contributions
+
+#ATTENTION!
+As mentioned above, this project was built using a Boostrap theme. This means that there are default files and folders NOT created by me and NOT written by me.
+Those 'default' files include:
+* Vendor folder, including the folders inside of it and their contents:
+    ** bootstrap
+    ** fontawesome-free
+    ** jquery
+* SCSS folder and ALL of its contents
+* JS folder
+* CSS folder and two of its contents:
+    ** clean-blog.css
+    ** clean-blog-min.css
+    ** (this does NOT include the style.css folder - this is a custom file, with custome styles, created by me)
+* mail folder
+
+*The menu items - each one a separate html file - have been edited, and some of them renamed, to suit the nature of the project. Additional pages have been added - the ones that represent the different categories (with underscores in their names).*
+
+*The templates folder is a custom creation, required by Flask and its Jinja templating feature.*
+
+
+
 
 
