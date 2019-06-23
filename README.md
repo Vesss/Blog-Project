@@ -163,6 +163,8 @@ The health page serves as an example for how all categories were (identically) w
         <hr class="article-line" />
 ```
 
+*The about page content is pulled from MongoDB as well. There is a separate (6th) collection, called 'about_information', specifically for the about page, containing only a single document.*
+
 ## Languages / Frameworks
 
 * HTML, CSS, SCSS
