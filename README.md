@@ -53,7 +53,9 @@ When the user goes to the 'POST' page, they are taken to a submission form. Ther
 ![author_name](https://i.ibb.co/1L04TGD/author.jpg "Author")
 
 **6. Click submit button:**  
-![submit_button](https://i.ibb.co/2M8FyzF/submit.jpg "Submit")
+![submit_button](https://i.ibb.co/2M8FyzF/submit.jpg "Submit")  
+
+After submitting the article, the user gets redirected to the home page, where he will see his article posted as the latest content in his section (whichever section they chose).
 
 ## Languages / Frameworks
 
