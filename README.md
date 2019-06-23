@@ -1,15 +1,9 @@
-         ___        ______     ____ _                 _  ___  
-        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
-       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
-      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
-     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
- ----------------------------------------------------------------- 
+## The Daily Writer
 
+The Daily Writer is my third milestone project as part of my Full Stack Web Development course at Code Institute.
 
-Hi there! Welcome to AWS Cloud9!
+The project is a blog / news site where anyone can post an article.
 
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
+The site has been built using HTML, CSS, Bootstrap 4 and a free Bootstrap theme from startbootstrap.com, called 'Clean Blog.'
 
-Happy coding!
-I did not write any of scss, that might not be good to learn scss. 
+Flask has been used for the back-end technology, and Flask's use of Jinja templating was implemented in the HTML to save the need to write additional code and to copy-paste the base / index of the blog.
