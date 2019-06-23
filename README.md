@@ -67,7 +67,7 @@ Those 'default' files include:
 * CSS folder and two of its contents:
     * clean-blog.css
     * clean-blog-min.css
-    * (this does NOT include the style.css folder - this is a custom file, with custome styles, created by me)
+    * (this does NOT include the style.css file - this is a custom file, with custome styles, created by me)
 * mail folder
 
 *The menu items - each one a separate html file - have been edited, and some of them renamed, to suit the nature of the project. Additional pages have been added - the ones that represent the different categories (with underscores in their names).*
