@@ -37,8 +37,11 @@ The latest article for each category (five categories in total) is displayed on 
 
 When the user goes to the 'POST' page, they are taken to a submission form. There they have to:
 
-1. Give the article a title
+*1. Give the article a title:*
 ![article_title](https://i.ibb.co/kQD764N/article-title.jpg "Article title")
+
+*2. Select a category:*
+![select_category](https://i.ibb.co/D4fzdsw/select-category.jpg "Seect category")
 
 ## Languages / Frameworks
 
