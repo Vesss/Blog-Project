@@ -63,10 +63,10 @@ After submitting the article, the user gets redirected to the home page, where h
 
 The uploaded contents (articles) are stored in a datastore - in MongoDB, divided into 5 collections:
 
-**1. general_news**
-**2. health**
-**3. sports**
-**4. technology**
+**1. general_news**  
+**2. health**  
+**3. sports**  
+**4. technology**  
 **5. travel**
 
 These collections have been wired in the application's back-end:
